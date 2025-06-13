@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validate.js" defer></script>
+</head>
+<body>
+  <h2>Register</h2>
+  <form action="../backend/RegisterUser.java" method="post" onsubmit="return validateRegister()">
+    <input type="text" name="name" placeholder="Name" id="name"><br>
+    <input type="email" name="email" placeholder="Email" id="email"><br>
+    <input type="password" name="password" placeholder="Password" id="password"><br>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

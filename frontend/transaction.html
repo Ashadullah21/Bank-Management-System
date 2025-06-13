@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validate.js" defer></script>
+</head>
+<body>
+  <h2>Make a Transaction</h2>
+  <form action="../backend/TransactionHandler.java" method="post" onsubmit="return validateTransaction()">
+    <select name="type" id="type">
+      <option value="Deposit">Deposit</option>
+      <option value="Withdraw">Withdraw</option>
+    </select><br>
+    <input type="number" name="amount" placeholder="Amount" id="amount"><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
