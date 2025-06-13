@@ -1,10 +1,267 @@
-body {
-  font-family: Arial;
-  text-align: center;
-  margin-top: 50px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
+
+body {
+  background: #f2f2f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #5d3fd3;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #6c63ff, #a463f2);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5d3fd3;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5d3fd3;
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #5d3fd3;
+}
+
+/* Footer */
+footer {
+  background-color: #5d3fd3;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #4a34ad;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+section {
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
 input, select, button {
   padding: 10px;
-  margin: 10px;
-  width: 200px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #5d3fd3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #432aa5;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.hero {
+  animation: fadeIn 1.2s ease-out;
+}
+
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.spacer {
+  height: 100px;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.secondary-btn {
+  padding: 10px 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  color: #333;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: #ddd;
+}
+
+.section-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.flex-row {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.padding-large {
+  padding: 3rem;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.border {
+  border: 1px solid #ddd;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
 }
